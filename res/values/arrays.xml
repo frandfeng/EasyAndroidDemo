@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="control">
+        <item>start</item>
+        <item>stop</item>
+    </string-array>
+    
+    <integer-array name="num">
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
+    
+    <string-array name="books">
+        <item>nava</item>
+        <item>java</item>
+        <item>net</item>
+    </string-array>
+    
+</resources>
