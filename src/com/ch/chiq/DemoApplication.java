@@ -49,6 +49,7 @@ public class DemoApplication extends FFApplication implements FFDBListener {
 	protected void onAfterCreateApplication() {
 		super.onAfterCreateApplication();
 		initImageLoader();
+		sendCrashReport();
 	}
 
 	/**
@@ -119,6 +120,10 @@ public class DemoApplication extends FFApplication implements FFDBListener {
 		String imageUri = "drawable://" + R.drawable.image; // from drawables (only images, non-9patch)
 		*/
 		ImageLoader.getInstance().init(config);
+	}
+	
+	private void sendCrashReport() {
+		FFLogger.d(this, "send crash report");
 	}
 	
 	@Override
