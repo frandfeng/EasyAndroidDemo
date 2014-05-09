@@ -12,7 +12,7 @@ import com.ch.chiq.DemoApplication;
 import com.ch.chiq.R;
 import com.ch.chiq.beans.DemoDataEntity;
 import com.frand.easyandroid.annotation.FFViewInject;
-import com.frand.easyandroid.util.FFLogger;
+import com.frand.easyandroid.log.FFLogger;
 
 public class DemoDBActivity extends BaseActivity {
 	@FFViewInject(id=R.id.btn_show_tables, click="onClick")
@@ -156,7 +156,7 @@ public class DemoDBActivity extends BaseActivity {
 	
 	private void printDemoDataEntities(List<DemoDataEntity> demoDataEntities) {
 		for (int i = 0; i < demoDataEntities.size(); i++) {
-			printDemoDataEntity(demoDataEntities.get(i));
+			 printDemoDataEntity(demoDataEntities.get(i));
 		}
 	}
 	

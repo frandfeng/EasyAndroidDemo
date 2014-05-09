@@ -31,7 +31,7 @@ import com.frand.easyandroid.annotation.FFCompareAnnotation;
 import com.frand.easyandroid.annotation.FFResInject;
 import com.frand.easyandroid.annotation.FFSelect;
 import com.frand.easyandroid.annotation.FFViewInject;
-import com.frand.easyandroid.util.FFLogger;
+import com.frand.easyandroid.log.FFLogger;
 
 /**
  * @author frandfeng

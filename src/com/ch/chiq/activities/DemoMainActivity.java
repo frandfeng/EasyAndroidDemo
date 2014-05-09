@@ -5,6 +5,7 @@ import android.widget.Button;
 
 import com.ch.chiq.BaseActivity;
 import com.ch.chiq.R;
+import com.frand.easyandroid.FFApplication;
 import com.frand.easyandroid.annotation.FFViewInject;
 
 public class DemoMainActivity extends BaseActivity {
@@ -21,6 +22,8 @@ public class DemoMainActivity extends BaseActivity {
 	private Button testOtherBtn;
 	@FFViewInject(id=R.id.btn_test_download, click="onClick")
 	private Button testDownLoadBtn;
+	@FFViewInject(id=R.id.btn_test_exception, click="onClick")
+	private Button testExceptionBtn;
 	@FFViewInject(id=R.id.btn_exit_app, click="onClick")
 	private Button exitAppBtn;
 
@@ -44,7 +47,11 @@ public class DemoMainActivity extends BaseActivity {
 		case R.id.btn_test_download:
 			doActivity(DemoDownLoadActivity.class.getName());
 			break;
+		case R.id.btn_test_exception:
+			doActivity(DemoExceptionActivity.class.getName());
+			break;
 		case R.id.btn_exit_app:
+			FFApplication.getApplication().exitApp(false);
 			break;
 		default:
 			break;

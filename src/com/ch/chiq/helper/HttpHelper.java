@@ -19,7 +19,6 @@ import android.content.Context;
 import android.widget.Toast;
 
 import com.ch.chiq.beans.DownloadUrls;
-import com.ch.chiq.utils.Configs;
 import com.frand.easyandroid.FFApplication;
 import com.frand.easyandroid.http.FFHttpClient;
 import com.frand.easyandroid.http.FFHttpRequest.ReqType;
@@ -43,7 +42,8 @@ public class HttpHelper {
 	
 	private static final String HTTP_DEV_PRIX = "http://frand.java.fjjsp01.com/";
 	private static final String HTTP_REL_PRIX = "";
-	private static final String HTTP_PRIX = Configs.isDevMode ? HTTP_DEV_PRIX : HTTP_REL_PRIX; 
+	private static final String HTTP_PRIX = FFApplication.getApplication().getConfig(
+			FFApplication.PROPERTIESCONFIG).getBoolean("isDevMode", false) ? HTTP_DEV_PRIX : HTTP_REL_PRIX;
 	
 	public HttpHelper(Context context) {
 		this.context = context;

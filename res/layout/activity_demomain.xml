@@ -44,6 +44,12 @@
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
 	        android:text="@string/test_download" />
+	    
+	    <Button
+	        android:id="@+id/btn_test_exception"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/test_exception" />
 	
 	    <Button
 	        android:id="@+id/btn_exit_app"

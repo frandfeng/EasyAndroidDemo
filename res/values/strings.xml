@@ -16,6 +16,9 @@
     <string name="test_image">图片缓存模块</string>
     <string name="test_download">下载器模块</string>
     <string name="test_other">测试其他工具</string>
+    <string name="test_exception">异常检测</string>
+    <string name="test_exception_catched">被获取到的异常</string>
+    <string name="test_exception_uncatched">没有被获取到的异常</string>
     <string name="exit_app">退出应用程序</string>
     <string name="tables_show">显示所有表</string>
     <string name="table_create">创建表</string>

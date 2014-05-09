@@ -17,17 +17,14 @@ package com.ch.chiq;
 
 import java.io.File;
 
-import android.annotation.SuppressLint;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.os.Handler;
 
-import com.ch.chiq.helper.DBHelper;
 import com.frand.easyandroid.FFApplication;
-import com.frand.easyandroid.db.FFDB;
 import com.frand.easyandroid.db.FFDBHelper.FFDBListener;
-import com.frand.easyandroid.util.FFLogger;
+import com.frand.easyandroid.log.FFLogger;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
 import com.nostra13.universalimageloader.cache.disc.naming.HashCodeFileNameGenerator;
 import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
@@ -48,13 +45,16 @@ import com.nostra13.universalimageloader.utils.StorageUtils;
  */
 public class DemoApplication extends FFApplication implements FFDBListener {
 	
-	public static FFDB ffdb;
-	
-	@SuppressLint("NewApi")
 	@Override
 	protected void onAfterCreateApplication() {
 		super.onAfterCreateApplication();
+		initImageLoader();
+	}
 
+	/**
+	 * 初始化imageloader
+	 */
+	private void initImageLoader() {
 		// image loader detail please refer https://github.com/nostra13/Android-Universal-Image-Loader
 		// DisplayImageOptions对每一个显示的任务有效
 		DisplayImageOptions options = new DisplayImageOptions.Builder()
@@ -119,10 +119,8 @@ public class DemoApplication extends FFApplication implements FFDBListener {
 		String imageUri = "drawable://" + R.drawable.image; // from drawables (only images, non-9patch)
 		*/
 		ImageLoader.getInstance().init(config);
-
-		ffdb = getmFfdbPool(DBHelper.dbName, DBHelper.dbVersion).getFreeDB();
 	}
-
+	
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		FFLogger.i(this, "database onCreate path="+db.getPath());

@@ -12,8 +12,8 @@ import com.frand.easyandroid.FFActivity;
 import com.frand.easyandroid.annotation.FFViewInject;
 import com.frand.easyandroid.http.FFFileRespHandler;
 import com.frand.easyandroid.http.FFHttpRequest.ReqType;
+import com.frand.easyandroid.log.FFLogger;
 import com.frand.easyandroid.util.FFDiskUtil;
-import com.frand.easyandroid.util.FFLogger;
 
 public class DemoDownLoadActivity extends FFActivity {
 
@@ -46,7 +46,7 @@ public class DemoDownLoadActivity extends FFActivity {
 	}
 	
 	private void initRespHandler() {
-		ffFileRespHandler = new FFFileRespHandler(FFDiskUtil.getDownLoadPath(this), "apk.apk") {
+		ffFileRespHandler = new FFFileRespHandler(FFDiskUtil.getExternalDownLoadDir(this).getAbsolutePath(), "apk.apk") {
 				
 			@Override
 			protected void onStart(int reqTag, String reqUrl) {

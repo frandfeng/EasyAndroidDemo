@@ -15,20 +15,20 @@
  */
 package com.ch.chiq.activities;
 
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
 import com.ch.chiq.BaseActivity;
 import com.ch.chiq.R;
 import com.ch.chiq.helper.HttpHelper;
 import com.ch.chiq.helper.HttpHelper.ReqAPI;
 import com.frand.easyandroid.annotation.FFViewInject;
-import com.frand.easyandroid.http.FFHttpRespHandler;
 import com.frand.easyandroid.http.FFHttpRequest.ReqType;
+import com.frand.easyandroid.http.FFHttpRespHandler;
 import com.frand.easyandroid.http.FFRequestParams;
 import com.frand.easyandroid.http.FFStringRespHandler;
-import com.frand.easyandroid.util.FFLogger;
-
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import com.frand.easyandroid.log.FFLogger;
 
 /** 
  * @author frandfeng

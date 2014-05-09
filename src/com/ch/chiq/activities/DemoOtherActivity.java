@@ -18,8 +18,8 @@ import com.frand.easyandroid.FFActivity;
 import com.frand.easyandroid.FFApplication;
 import com.frand.easyandroid.annotation.FFViewInject;
 import com.frand.easyandroid.config.FFIConfig;
+import com.frand.easyandroid.log.FFLogger;
 import com.frand.easyandroid.util.FFComparator;
-import com.frand.easyandroid.util.FFLogger;
 
 public class DemoOtherActivity extends FFActivity {
 	@FFViewInject(id = R.id.btn_test_preference, click = "onClick")
